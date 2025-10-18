@@ -233,12 +233,13 @@ def detect_and_display_all(model, base_dir=base_path, images=image_paths):
     """
     for label, relative_path in images.items():
         image_path = os.path.join(base_dir, relative_path)
-        print(f"\n🔍 Processing: {label.upper()} — {image_path}")
+        print(f"\n Processing: {label.upper()} — {image_path}")
         try:
             detect_and_display(image_path, model)
         except Exception as e:
-            print(f"❌ Error processing {label}: {e}")
+            print(f" Error processing {label}: {e}")
 
 
 # Run predictions
+
 detect_and_display_all(model)
